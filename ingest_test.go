@@ -26,6 +26,7 @@ func TestExamplesInTheWild(t *testing.T) {
 				assertLen(t, suites, 2)
 				assertLen(t, suites[0].Tests, 0)
 				assertLen(t, suites[1].Tests, 3)
+				assertEqual(t, suites[1].Time.Seconds(), 0.006)
 				assertError(t, suites[1].Tests[0].Error, "Assertion failed")
 
 				suite := suites[1]

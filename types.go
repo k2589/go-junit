@@ -79,6 +79,9 @@ type Suite struct {
 	// Suites is an ordered collection of suites with associated tests.
 	Suites []Suite `json:"suites,omitempty" yaml:"suites,omitempty"`
 
+	// Time is the total time taken to run the tests (parsed from test suite field).
+	Time time.Duration `json:"time,omitempty" yaml:"time,omitempty"`
+
 	// Timestamp is the time at which the suite was run, date and time in ISO8601.
 	Timestamp time.Time `json:"timestamp,omitempty" yaml:"timestamp,omitempty"`
 
